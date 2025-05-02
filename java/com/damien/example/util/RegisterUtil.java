@@ -3,11 +3,12 @@ package com.damien.example.util;
 import com.damien.example.Example;
 import com.damien.example.Ref;
 import com.damien.example.entity.monster.EntityFly;
-import com.damien.example.entity.monster.EntitySpiderZombie;
+import com.damien.example.entity.monster.EntityCybug;
 import com.damien.example.init.Blocks;
 import com.damien.example.init.Items;
 import com.damien.example.init.Mobs;
 import com.damien.example.renderers.EntityFlyRF;
+import com.damien.example.renderers.EntityCybugRF;
 import com.damien.example.renderers.EntitySpiderZombieRF;
 import com.damien.example.renderers.RenderSpiderZombie;
 import net.minecraft.block.Block;
@@ -36,7 +37,7 @@ public class RegisterUtil {
         RegisterItems(event, Items.exampleItem);
         RegisterBlocks(event, Blocks.exampleBlock);
         //RegisterMobs(event, Mobs.spiderZombie);
-        RegisterMobs(event, Mobs.fly);
+        RegisterMobs(event, Mobs.cybug);
     }
 
     private static void RegisterBlocks (FMLPreInitializationEvent event, Block...blocks)
@@ -90,13 +91,13 @@ public class RegisterUtil {
                         entityMob.getName(),
                         mobId,
                         Ref.MODID,
-                        2000,
-                        20,
+                        80,
+                        3,
                         false,
-                        0xFF0000,
+                        0x0000FF,
                         0x808080);
                 Example.LOGGER.info("\t\tRegistered!");
-                RenderingRegistry.registerEntityRenderingHandler(EntityFly.class, new EntityFlyRF());
+                RenderingRegistry.registerEntityRenderingHandler(EntityCybug.class, new EntityCybugRF());
             }
             mobId++;
         }
