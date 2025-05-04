@@ -1,14 +1,8 @@
 package com.damien.example.renderers;
 
 import com.damien.example.entity.models.ModelCybug;
-import com.damien.example.entity.models.ModelFly;
 import com.damien.example.entity.monster.EntityCybug;
 import com.damien.example.entity.monster.EntityCybug;
-import com.damien.example.entity.monster.EntityFly;
-import com.damien.example.entity.monster.EntitySpiderZombie;
-import net.minecraft.client.model.ModelBase;
-import com.damien.example.entity.models.ModelCybug;
-import net.minecraft.client.model.ModelSpider;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;
